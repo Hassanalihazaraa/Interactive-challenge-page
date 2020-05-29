@@ -5,13 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.scss">
     <title>Document</title>
 </head>
 <body>
 
 <section class="container">
-
     <div class="carousel">
         <figure>
             <img class="slide-img" src="./img/1.jpg" alt="something">
@@ -30,7 +29,7 @@
         <button id="practical-btn" class="tabLinks">Practical Info</button>
         <button id="contact-btn" class="tabLinks">Contact Form</button>
     </div>
-    <div id="summary" class="tabContent tabSummary">
+    <div id="summary" class="tabContent tabDetails">
         <h1>Summary</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -39,7 +38,7 @@
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
-    <div id="practical-info" class="tabContent tabInfo">
+    <div id="practical-info" class="tabContent tabDetails">
         <h1>Practical Info</h1>
         <div class="email">
             <a href="mailto:email@domain.com" target="_blank"><i class="fas fa-envelope"></i></a>
@@ -55,16 +54,16 @@
                     class="far fa-clock"></i></a>
         </div>
     </div>
-    <div id="contact-form" class="tabContent tabForm">
+    <div id="contact-form" class="tabContent tabDetails">
         <h1>Please let us know! What you think about this event?</h1>
         <form name="form" class="register">
             <label>Fullname</label>
-            <input type="text" name="fullname" placeholder="Fullname">
+            <input id="fullname" type="text" placeholder="Fullname">
             <label>Email</label>
-            <input type="email" name="Email" placeholder="Email">
+            <input id="email" type="email" placeholder="Email">
             <label>Message</label>
-            <textarea name="Message" placeholder="Message"></textarea>
-            <input type="submit"></input>
+            <textarea id="textarea" placeholder="Message"></textarea>
+            <button id="button" type="submit"></button>
         </form>
     </div>
 </section>
