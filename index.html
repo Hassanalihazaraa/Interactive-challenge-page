@@ -9,21 +9,73 @@
     <title>Document</title>
 </head>
 <body>
-<!-- carousel -->
-<div class="container">
+<!-- carousel section -->
+<section class="container">
     <div class="carousel">
         <figure>
             <img class="slide-img" src="./img/1.jpg" alt="something">
             <img class="slide-img" src="./img/2.jpg" alt="something">
             <img class="slide-img" src="./img/3.jpg" alt="something">
         </figure>
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+        <a id="prev" class="prev">&#10094;</a>
+        <a id="next" class="next">&#10095;</a>
     </div>
+</section>
 
-</div>
+<!-- Tab section -->
+<section class="tab">
+    <div class="tab-buttons">
+        <button class="tabLinks">Summary</button>
+        <button class="tabLinks">Practical Info</button>
+        <button class="tabLinks">Contact Form</button>
+    </div>
+    <div id="summary" class="tabContent">
+        <h1>Summary</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <div id="practical-info" class="tabContent">
+        <h1>Practical Info</h1>
+        <div class="email">
+            <a href="mailto:email@domain.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="address">
+            <a href="https://www.google.be/maps/place/Sint-Pietersvliet+7,+2000+Antwerpen/@51.225583,4.3987072,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3f6591bd768ef:0x3c540c84b257aba5!8m2!3d51.2255797!4d4.4008959?hl=en"
+               target="_blank"><i
+                    class="fas fa-map-marker-alt"></i></a>
+        </div>
+        <div class="date">
+            <a href="https://www.google.com/search?q=current+date&oq=current+date&aqs=chrome..69i57j0l7.7430j1j8&sourceid=chrome&ie=UTF-8"
+               target="_blank"><i
+                    class="far fa-clock"></i></a>
+        </div>
+    </div>
+    <div id="contact-form" class="tabContent">
+        <h1>Please let us know! What you think about this event?</h1>
+        <form class="register">
+            <label>Fullname</label>
+            <input type="text" placeholder="Fullname">
+            <label>Email</label>
+            <input type="email" placeholder="Email">
+            <label>Message</label>
+            <textarea placeholder="Message"></textarea>
+            <input type="submit"></input>
+        </form>
+    </div>
+</section>
+
+<!-- Number counter section -->
+<section class="counter">
+
+</section>
 
 <!-- script tag -->
 <script src="index.js"></script>
+
+<script src="https://kit.fontawesome.com/b12ea689b0.js" crossorigin="anonymous"></script>
 </body>
 </html>
