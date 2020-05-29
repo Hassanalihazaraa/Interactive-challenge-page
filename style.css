@@ -4,19 +4,20 @@ html, body {
 }
 
 * {
-    border-spacing: x²;
+    box-sizing: border-box;
 }
-.carousel{
+
+.carousel {
     max-width: 100%;
     position: relative;
     margin: auto;
 }
 
-.main-img, .slide-img{
+.main-img, .slide-img {
     display: none;
 }
 
-.next, .prev{
+.next, .prev {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -41,15 +42,22 @@ img {
     border-radius: 3px 0 0 3px;
 }
 
-.tabContent{
+.tabInfo {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.email > a,
+.address > a,
+.date > a {
+    display: flex;
+}
 
-.register{
-    width: 20%;
+
+.register {
+    width: 30%;
 }
 
 .register input, textarea {

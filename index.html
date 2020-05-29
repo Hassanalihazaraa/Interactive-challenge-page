@@ -26,9 +26,9 @@
 <!-- Tab section -->
 <section class="tab">
     <div class="tab-buttons">
-        <button class="tabLinks">Summary</button>
-        <button class="tabLinks">Practical Info</button>
-        <button class="tabLinks">Contact Form</button>
+        <button id="summary-btn" class="tabLinks">Summary</button>
+        <button id="practical-btn" class="tabLinks">Practical Info</button>
+        <button id="contact-btn" class="tabLinks">Contact Form</button>
     </div>
     <div id="summary" class="tabContent">
         <h1>Summary</h1>
@@ -39,7 +39,7 @@
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
-    <div id="practical-info" class="tabContent">
+    <div id="practical-info" class="tabInfo">
         <h1>Practical Info</h1>
         <div class="email">
             <a href="mailto:email@domain.com" target="_blank"><i class="fas fa-envelope"></i></a>
@@ -55,15 +55,15 @@
                     class="far fa-clock"></i></a>
         </div>
     </div>
-    <div id="contact-form" class="tabContent">
+    <div id="contact-form" class="tabForm">
         <h1>Please let us know! What you think about this event?</h1>
-        <form class="register">
+        <form name="form" class="register">
             <label>Fullname</label>
-            <input type="text" placeholder="Fullname">
+            <input type="text" name="fullname" placeholder="Fullname">
             <label>Email</label>
-            <input type="email" placeholder="Email">
+            <input type="email" name="Email" placeholder="Email">
             <label>Message</label>
-            <textarea placeholder="Message"></textarea>
+            <textarea name="Message" placeholder="Message"></textarea>
             <input type="submit"></input>
         </form>
     </div>
