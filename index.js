@@ -1,41 +1,32 @@
-var slideIndex = 1;
-var i;
-var slides = document.getElementsByClassName("slide-img");
+let slideIndex = 1;
+let i;
+let slides = document.getElementsByClassName("slide-img");
 slides[slideIndex].style.display = "block";
 
 function display() {
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    if (slideIndex == 3) {
+    if (slideIndex == slides.length) {
         slideIndex = 0;
     }
     if (slideIndex < 0) {
-        slideIndex = 2;
+        slideIndex = slides.length - 1;
     }
-    console.log(slideIndex);
-    if (slideIndex >= 0 && slideIndex < 3) {
+    if (slideIndex >= 0 && slideIndex < slides.length) {
         slides[slideIndex].style.display = "block";
     }
 }
-
 document.getElementById("next").onclick = function () {
     slideIndex++;
     display();
-
 };
 document.getElementById("prev").onclick = function () {
     slideIndex--;
     display();
-
 };
 
-
 //tabs
-
 function showTab(x) {
     for (i = 0; i < contents.length; i++) {
         contents[i].style.display = "none";
@@ -44,57 +35,49 @@ function showTab(x) {
         contents[x].style.display = "block";
     }
 }
-
 contents = document.getElementsByClassName("tabContent");
 showTab(null);
 
 document.getElementById("summary-btn").onclick = function () {
-    showTab(0)
+    showTab(0);
+    window.scrollTo(0,document.body.scrollHeight/2)
 };
 document.getElementById("practical-btn").onclick = function () {
-
-    showTab(1)
-
+    showTab(1);
+    window.scrollTo(0,document.body.scrollHeight/2)
 };
 document.getElementById("contact-btn").onclick = function () {
-    showTab(2)
-
+    showTab(2);
+    window.scrollTo(0,document.body.scrollHeight/2)
 };
-document.getElementById("button").disabled = true;
-document.getElementById("fullname").onkeyup = function () {
 
-    if (document.getElementById("fullname").value == "" || document.getElementById("email").value == "" ||
+//form validation
+document.getElementById("button").disabled = true;
+
+function emptycheck() {
+    if (document.getElementById("fullname").value == "" ||
+        document.getElementById("email").value == "" ||
         document.getElementById("textarea").value == "") {
         document.getElementById("button").disabled = true;
     } else {
         document.getElementById("button").disabled = false;
     }
+}
+
+document.getElementById("fullname").onkeyup = function () {
+    emptycheck()
 };
 document.getElementById("email").onkeyup = function () {
-
-
-    if (document.getElementById("fullname").value == "" || document.getElementById("email").value == "" ||
-        document.getElementById("textarea").value == "") {
-        document.getElementById("button").disabled = true;
-    } else {
-        document.getElementById("button").disabled = false;
-    }
+    emptycheck()
 };
 document.getElementById("textarea").onkeyup = function () {
-
-
-    if (document.getElementById("fullname").value == "" || document.getElementById("email").value == "" ||
-        document.getElementById("textarea").value == "") {
-        document.getElementById("button").disabled = true;
-    } else {
-        document.getElementById("button").disabled = false;
-    }
+    emptycheck()
 };
 
 let number = 1;
 window.setInterval(function () {
-    number ++;
+    number++;
     document.getElementById("counter-number").innerHTML = number;
     console.log(number)
-},250);
+}, 250);
 
