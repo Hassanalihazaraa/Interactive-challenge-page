@@ -90,3 +90,11 @@ document.getElementById("textarea").onkeyup = function () {
         document.getElementById("button").disabled = false;
     }
 };
+
+let number = 1;
+window.setInterval(function () {
+    number +=4;
+    document.getElementById("counter-number").innerHTML = number;
+    console.log(number)
+},500);
+
