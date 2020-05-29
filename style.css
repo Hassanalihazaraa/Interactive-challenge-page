@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.carousel{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.main-img, .slide-img{
+    display: none;
+}
+
+.next, .prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
